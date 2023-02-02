@@ -39,13 +39,11 @@ class Korok:
 
     def elso_idos(self, lista):
         i = 0
-        min = -1
         while i < len(lista):
-            if lista[i] >= 70 and (min < 0 or lista[i] < lista[min]):
-                min = i
+            if lista[i] >= 70:
+                return i
             i += 1
-        print(">>", lista[min], min)
-        return min
+        return -1
 
     def konzolra_ir(self, lista):
         idx = self.elso_idos(lista)

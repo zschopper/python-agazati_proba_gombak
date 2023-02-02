@@ -23,6 +23,7 @@ k.beker(lista)
 
 print(f"II/A, B, C:\n\t {k.osszefuz(lista)}")
 
+print("II/D, E:\n\t", end="")
 k.konzolra_ir(lista)
 k.fajl_ir(lista, "oreg.txt")
 
