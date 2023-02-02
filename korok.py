@@ -18,13 +18,18 @@ F.	Az elso_idos függvény eredményét írasd ki a mintának megfelelően a ore
 
 class Korok:
 
-    def beker(self, lista):
+    def beker(self):
+
+        # return [20, 34, 78, 83, 90]
+
+        lista = []
         while len(lista) < 5:
             szam = int(input("Adjon meg egy számot: "))
             if 0 <= szam <= 120:
                 lista.append(szam)
             else:
                 print("A megadott kornak 0 és 120 között kell legyen! ")
+        return lista
 
     def osszefuz(self, lista):
         elvalaszto = ":"
@@ -39,11 +44,13 @@ class Korok:
 
     def elso_idos(self, lista):
         i = 0
-        while i < len(lista):
-            if lista[i] >= 70:
-                return i
+        while i < len(lista) and lista[i] < 70:
             i += 1
-        return -1
+
+        if i < len(lista):
+            return i
+        else:
+            return -1
 
     def konzolra_ir(self, lista):
         idx = self.elso_idos(lista)

@@ -18,8 +18,7 @@ print()
 
 k = Korok()
 
-lista = []
-k.beker(lista)
+lista = k.beker()
 
 print(f"II/A, B, C:\n\t {k.osszefuz(lista)}")
 
